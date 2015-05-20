@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"  ng-app="phonecatApp" >
+<head>
+  <meta charset="utf-8">
+  <title>Local Storage</title> 
+  <script src="../angular-sdk/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head> 
+<body ng-controller="PhoneListCtrl">
+<p>Nothing here {{'yet' + '!'}}</p>  
+
+
+ <input value="" type="text"   ng-model="contactName">
+ <input value="" type="text"   ng-model="contactNumber">
+   <ul>
+ <button ng-click="addContact()">Add to list</button>
+ <button ng-click="saveOnDisk('arun raj' )">Local storage</button> 
+ <button ng-click="readDataFromDisk( )">Open</button> 
+  
+    </ul>
+ <hr>
+  <ul>
+    <li ng-repeat="phone in phoneList">
+      <span>{{phone.name}}</span>
+      <p>{{phone.number}}</p>
+    </li>
+  </ul>
+     
+ <hr>
+ <p>Total number of phones: {{phoneList.length}}</p>
+  <hr>
+ <p>{{dataObj}}</p>
+</body>
+</html>
+
+ 
