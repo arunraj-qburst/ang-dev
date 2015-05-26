@@ -33,8 +33,7 @@ phonecatApp.controller('PhoneListCtrl', function($scope) {
 	$scope.saveOnDisk = function (data)
 	{
 		alert( $scope.$localStorage);
-		$localStorage.message = data + " updated";
-		
+		$localStorage.message = data + " updated"; 
 
 	}
 
